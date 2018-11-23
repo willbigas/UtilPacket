@@ -1,6 +1,11 @@
 package utilpacket;
 
 /**
+ * 
+ * /**
+ * 
+ * Documentado 1.0
+ * Documentação 2.0
  *
  * @author Alunos
  */
