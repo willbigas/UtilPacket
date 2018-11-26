@@ -18,14 +18,6 @@ public class Override {
     }
 	
 	
-    /**
-     * Sobrescrever ToString para Vizualizar o Objeto.
-     */
-    @Override
-    public String toString() {      // Corpo do Objeto
-        return this.modelo + " (" + this.marca + ")";
-    }
-	
 	
     /**
      * Sobrescrever o Equals para Comparar objetos.
