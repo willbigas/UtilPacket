@@ -9,6 +9,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
+ * Metodos Utilitarios para transmissao de dados via Rede - Swing
  *
  * @author William
  */
