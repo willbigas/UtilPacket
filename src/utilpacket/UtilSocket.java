@@ -80,7 +80,7 @@ public class UtilSocket {
 
     }
 
-    private static void recebendoDadosViaSocketInfinitamente(Integer porta) throws NumberFormatException, HeadlessException, Exception {
+    public static void recebendoDadosViaSocketInfinitamente(Integer porta) throws NumberFormatException, HeadlessException, Exception {
         UtilSocket.iniciarSocketEstatico(porta);
         Thread t = new Thread() {
             public void run() {
