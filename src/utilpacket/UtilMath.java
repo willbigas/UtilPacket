@@ -8,7 +8,7 @@ import java.util.Random;
  * @since 16/09/2018
  * @author William Bigas Mauro
  */
-public class Util_Math {
+public class UtilMath {
 
     /**
      * Medias de Decimais.
@@ -54,7 +54,7 @@ public class Util_Math {
      * @return Double
      */
     public static Double raizQuadrada(Integer valorRaiz) {
-        Double valorTotal = Math.sqrt(valorRaiz);
+        Double valorTotal = java.lang.Math.sqrt(valorRaiz);
         return valorTotal;
     }
 

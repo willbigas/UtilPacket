@@ -8,7 +8,7 @@ import javax.swing.UIManager;
  * @author WILL
  * @since 28/11/2018
  */
-public class Util_Swing {
+public class UtilSwing {
 
     /**
      * Mudando o visual das janelas para padrão windows.

@@ -14,7 +14,7 @@ import java.util.Random;
  * @since 16/09/2018 - Ultima Modificacao
  * @author William Bigas Mauro
  */
-public class Util_List {
+public class UtilList {
 
     /**
      * Ordena uma Arraylist usando Algoritmo BubbleSort

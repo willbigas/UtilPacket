@@ -15,7 +15,7 @@ import java.util.List;
  * @author William Bigas Mauro
  * @since 29/08/2018
  */
-public class Util_File {
+public class UtilArquivo {
 
     /**
      * Leitura Simples de arquivo concatenando em Linhas

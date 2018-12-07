@@ -11,7 +11,7 @@ import java.util.Date;
  * @since 03/09/2018 - Ultima Modificação
  * @author William Bigas Mauro
  */
-public class Util_Format {
+public class UtilFormat {
 
     /**
      * Convertendo String para Data no Formato DD/MM/AAAA
