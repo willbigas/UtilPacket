@@ -1,0 +1,34 @@
+﻿1) Baixar o ZIP projeto_bd.zip
+2) Descompactar na pasta desejada e abrir o projeto no NetBeans
+3) Iniciar o MySQL e criar um banco de dados com o nome que desejar
+4) Configurar o IP, nome do banco de dados, usuário e senha da instância do MySQL que roda na sua máquina na classe SessionFactory, método getConnection
+		O exemplo abaixo conecta no banco "exemplo", no IP localhost, com o usuário "root" e a senha "mysql"
+		return DriverManager.getConnection("jdbc:mysql://localhost/exemplo", "root", "mysql");
+5) Executar os seguintes comandos no banco de dados recém criado:
+		CREATE TABLE departamento (
+		  id int(11) NOT NULL AUTO_INCREMENT,
+		  nome varchar(30) DEFAULT NULL,
+		  descricao varchar(80) DEFAULT NULL,
+		  PRIMARY KEY (id)
+		) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+		CREATE TABLE usuario (
+		  id int(11) NOT NULL AUTO_INCREMENT,
+		  nome varchar(80) DEFAULT NULL,
+		  nascimento date DEFAULT NULL,
+		  id_departamento int(11) DEFAULT NULL,
+		  PRIMARY KEY (id),
+		  KEY fk_usuario_departamento (id_departamento),
+		  CONSTRAINT usuario_ibfk_1 FOREIGN KEY (id_departamento) REFERENCES departamento (id) ON DELETE NO ACTION
+		) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+
+		CREATE TABLE telefone (
+		  id int(11) NOT NULL AUTO_INCREMENT,
+		  numero varchar(20) DEFAULT NULL,
+		  tipo varchar(20) DEFAULT NULL,
+		  ddd int(11) DEFAULT NULL,
+		  id_usuario int(11) DEFAULT NULL,
+		  PRIMARY KEY (id),
+		  KEY id_usuario (id_usuario),
+		  CONSTRAINT telefone_ibfk_1 FOREIGN KEY (id_usuario) REFERENCES usuario (id)
+		) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
