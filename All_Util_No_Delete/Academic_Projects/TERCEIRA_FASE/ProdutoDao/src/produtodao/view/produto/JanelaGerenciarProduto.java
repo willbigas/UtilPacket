@@ -1,24 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package produtodao.view.produto;
 
-import javax.swing.table.DefaultTableModel;
-import produtodao.dao.ProdutoDao;
-import produtodao.model.Produto;
+import produtodao.control.ProdutoControl;
 
 /**
  *
  * @author William
  */
-public class JanelaGerenciar extends javax.swing.JFrame {
+public class JanelaGerenciarProduto extends javax.swing.JFrame {
 
     /**
      * Creates new form JanelaGerenciar
      */
-    public JanelaGerenciar() {
+    public JanelaGerenciarProduto() {
         initComponents();
     }
 
@@ -137,11 +130,14 @@ public class JanelaGerenciar extends javax.swing.JFrame {
 
     private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
         // TODO add your handling code here:
+        ProdutoControl.inserindoProduto(campoNome, campoValor, campoData, tabelaProduto);
+        
+
     }//GEN-LAST:event_buttonSalvarActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        atualizarJtable();
+        ProdutoControl.atualizarJtable(tabelaProduto);
     }//GEN-LAST:event_formWindowOpened
 
     /**
@@ -161,20 +157,21 @@ public class JanelaGerenciar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JanelaGerenciar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaGerenciarProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JanelaGerenciar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaGerenciarProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JanelaGerenciar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaGerenciarProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JanelaGerenciar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaGerenciarProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JanelaGerenciar().setVisible(true);
+                new JanelaGerenciarProduto().setVisible(true);
             }
         });
     }
@@ -191,18 +188,5 @@ public class JanelaGerenciar extends javax.swing.JFrame {
     private javax.swing.JLabel textoTitulo;
     private javax.swing.JLabel textoValor;
     // End of variables declaration//GEN-END:variables
-public void atualizarJtable() {
-        DefaultTableModel model = (DefaultTableModel) tabelaProduto.getModel();
-        model.setNumRows(0);
-        ProdutoDao produtoDao = new ProdutoDao();
-        for (Produto p : produtoDao.listar()) {
-            model.addRow(new Object[]{
-                p.getId(),
-                p.getNome(),
-                p.getValor(),
-                p.getDataCadastro()
-            });
-        }
-    }
 
 }

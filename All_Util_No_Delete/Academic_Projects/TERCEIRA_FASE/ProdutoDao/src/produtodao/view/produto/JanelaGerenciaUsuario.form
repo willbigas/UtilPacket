@@ -26,16 +26,9 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="buttonSalvar" min="-2" max="-2" attributes="0"/>
-                  <Component id="textoTitulo" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="campoNome" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
@@ -43,17 +36,39 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="textoValor" min="-2" max="-2" attributes="0"/>
-                          <Component id="campoValor" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="textoEmail" min="-2" max="-2" attributes="0"/>
+                          <Component id="campoEmail" min="-2" pref="90" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="textoData" min="-2" max="-2" attributes="0"/>
-                          <Component id="campoData" min="-2" pref="148" max="-2" attributes="0"/>
+                          <Component id="campoSenha" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                          <Component id="textoSenha" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="campoNivel" pref="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="textoNivel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textoNivel1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="buttonSalvar" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="textoTitulo" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="35" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -62,17 +77,21 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Component id="textoTitulo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="textoNivel" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="textoNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="textoData" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="textoValor" alignment="3" max="32767" attributes="0"/>
+                  <Component id="textoSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="textoEmail" alignment="3" max="32767" attributes="0"/>
+                  <Component id="textoNivel1" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="campoNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="campoValor" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="campoData" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="campoEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="campoSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="campoNivel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="buttonSalvar" min="-2" max="-2" attributes="0"/>
@@ -86,7 +105,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="textoTitulo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Gerenciamento de Produtos"/>
+        <Property name="text" type="java.lang.String" value="Gerenciamento de Usuarios"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="textoNome">
@@ -99,22 +118,22 @@
         <Property name="columns" type="int" value="15"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="textoData">
+    <Component class="javax.swing.JLabel" name="textoSenha">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Data:"/>
+        <Property name="text" type="java.lang.String" value="Senha:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="campoValor">
+    <Component class="javax.swing.JTextField" name="campoEmail">
       <Properties>
         <Property name="columns" type="int" value="15"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="textoValor">
+    <Component class="javax.swing.JLabel" name="textoEmail">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Valor:"/>
+        <Property name="text" type="java.lang.String" value="Email:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="campoData">
+    <Component class="javax.swing.JTextField" name="campoSenha">
       <Properties>
         <Property name="columns" type="int" value="15"/>
       </Properties>
@@ -134,18 +153,24 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tabelaProduto">
+        <Component class="javax.swing.JTable" name="tabelaUsuario">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="4" rowCount="4">
+              <Table columnCount="5" rowCount="4">
                 <Column editable="true" title="Codigo" type="java.lang.Object"/>
                 <Column editable="true" title="Nome" type="java.lang.Object"/>
-                <Column editable="true" title="Valor" type="java.lang.Object"/>
-                <Column editable="true" title="DataCadastro" type="java.lang.Object"/>
+                <Column editable="true" title="Email" type="java.lang.Object"/>
+                <Column editable="true" title="Senha" type="java.lang.Object"/>
+                <Column editable="true" title="Nivel" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
@@ -175,5 +200,23 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="textoNivel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nivel:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="campoNivel">
+      <Properties>
+        <Property name="columns" type="int" value="15"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoNivelActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="textoNivel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="1[ADMIN],2[NORMAL]"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>
