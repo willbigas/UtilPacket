@@ -1,6 +1,6 @@
 package produtodao.view.produto;
 
-import produtodao.control.ProdutoControl;
+import produtodao.control.UsuarioControl;
 
 /**
  *
@@ -158,14 +158,14 @@ public class JanelaGerenciaUsuario extends javax.swing.JFrame {
 
     private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
         // TODO add your handling code here:
-        ProdutoControl.inserindoProduto(campoNome, campoEmail, campoSenha, tabelaUsuario);
+        UsuarioControl.inserindoUsuario(campoNome, campoEmail, campoSenha, campoNivel, tabelaUsuario);
         
 
     }//GEN-LAST:event_buttonSalvarActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        ProdutoControl.atualizarJtable(tabelaUsuario);
+        UsuarioControl.atualizarJtable(tabelaUsuario);
     }//GEN-LAST:event_formWindowOpened
 
     private void campoNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNivelActionPerformed
