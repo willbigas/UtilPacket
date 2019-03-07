@@ -98,6 +98,9 @@
       <Properties>
         <Property name="columns" type="int" value="15"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="textoData">
       <Properties>
@@ -108,6 +111,9 @@
       <Properties>
         <Property name="columns" type="int" value="15"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="textoValor">
       <Properties>
@@ -118,6 +124,9 @@
       <Properties>
         <Property name="columns" type="int" value="15"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="buttonSalvar">
       <Properties>
@@ -172,6 +181,9 @@
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

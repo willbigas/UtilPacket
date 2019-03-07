@@ -8,11 +8,14 @@ import basedao.control.UsuarioControl;
  */
 public class JanelaGerenciaUsuario extends javax.swing.JFrame {
 
+    UsuarioControl usuarioControl;
+    
     /**
      * Creates new form JanelaGerenciar
      */
     public JanelaGerenciaUsuario() {
         initComponents();
+        usuarioControl = new UsuarioControl();
     }
 
     /**
@@ -26,16 +29,11 @@ public class JanelaGerenciaUsuario extends javax.swing.JFrame {
 
         textoTitulo = new javax.swing.JLabel();
         textoNome = new javax.swing.JLabel();
-        campoNome = new javax.swing.JTextField();
         textoSenha = new javax.swing.JLabel();
-        campoEmail = new javax.swing.JTextField();
         textoEmail = new javax.swing.JLabel();
-        campoSenha = new javax.swing.JTextField();
         buttonSalvar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabelaUsuario = new javax.swing.JTable();
         textoNivel = new javax.swing.JLabel();
-        campoNivel = new javax.swing.JTextField();
         textoNivel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,11 +80,6 @@ public class JanelaGerenciaUsuario extends javax.swing.JFrame {
         textoNivel.setText("Nivel:");
 
         campoNivel.setColumns(15);
-        campoNivel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNivelActionPerformed(evt);
-            }
-        });
 
         textoNivel1.setText("1[ADMIN],2[NORMAL]");
 
@@ -157,20 +150,14 @@ public class JanelaGerenciaUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
-        // TODO add your handling code here:
-        UsuarioControl.inserindoUsuario(campoNome, campoEmail, campoSenha, campoNivel, tabelaUsuario);
+        usuarioControl.inserindoUsuarioAction();
         
 
     }//GEN-LAST:event_buttonSalvarActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        // TODO add your handling code here:
-        UsuarioControl.atualizarJtable(tabelaUsuario);
+        usuarioControl.listarUsuarioAction();
     }//GEN-LAST:event_formWindowOpened
-
-    private void campoNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNivelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoNivelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,12 +199,12 @@ public class JanelaGerenciaUsuario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonSalvar;
-    private javax.swing.JTextField campoEmail;
-    private javax.swing.JTextField campoNivel;
-    private javax.swing.JTextField campoNome;
-    private javax.swing.JTextField campoSenha;
+    public static final javax.swing.JTextField campoEmail = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoNivel = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoNome = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoSenha = new javax.swing.JTextField();
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tabelaUsuario;
+    public static final javax.swing.JTable tabelaUsuario = new javax.swing.JTable();
     private javax.swing.JLabel textoEmail;
     private javax.swing.JLabel textoNivel;
     private javax.swing.JLabel textoNivel1;

@@ -117,6 +117,9 @@
       <Properties>
         <Property name="columns" type="int" value="15"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="textoSenha">
       <Properties>
@@ -127,6 +130,9 @@
       <Properties>
         <Property name="columns" type="int" value="15"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="textoEmail">
       <Properties>
@@ -137,6 +143,9 @@
       <Properties>
         <Property name="columns" type="int" value="15"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="buttonSalvar">
       <Properties>
@@ -197,6 +206,9 @@
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
@@ -209,9 +221,9 @@
       <Properties>
         <Property name="columns" type="int" value="15"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoNivelActionPerformed"/>
-      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="25"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="textoNivel1">
       <Properties>

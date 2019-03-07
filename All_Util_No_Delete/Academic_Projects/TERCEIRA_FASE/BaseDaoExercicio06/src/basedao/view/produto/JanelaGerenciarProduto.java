@@ -8,11 +8,14 @@ import basedao.control.ProdutoControl;
  */
 public class JanelaGerenciarProduto extends javax.swing.JFrame {
 
+    
+    ProdutoControl produtoControl;
     /**
      * Creates new form JanelaGerenciar
      */
     public JanelaGerenciarProduto() {
         initComponents();
+        produtoControl = new ProdutoControl();
     }
 
     /**
@@ -26,14 +29,10 @@ public class JanelaGerenciarProduto extends javax.swing.JFrame {
 
         textoTitulo = new javax.swing.JLabel();
         textoNome = new javax.swing.JLabel();
-        campoNome = new javax.swing.JTextField();
         textoData = new javax.swing.JLabel();
-        campoValor = new javax.swing.JTextField();
         textoValor = new javax.swing.JLabel();
-        campoData = new javax.swing.JTextField();
         buttonSalvar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabelaProduto = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -129,15 +128,13 @@ public class JanelaGerenciarProduto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
-        // TODO add your handling code here:
-        ProdutoControl.inserindoProduto(campoNome, campoValor, campoData, tabelaProduto);
+        ProdutoControl.inserirProdutoAction();
         
 
     }//GEN-LAST:event_buttonSalvarActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        // TODO add your handling code here:
-        ProdutoControl.atualizarJtable(tabelaProduto);
+        ProdutoControl.listarAction();
     }//GEN-LAST:event_formWindowOpened
 
     /**
@@ -178,11 +175,11 @@ public class JanelaGerenciarProduto extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonSalvar;
-    private javax.swing.JTextField campoData;
-    private javax.swing.JTextField campoNome;
-    private javax.swing.JTextField campoValor;
+    public static final javax.swing.JTextField campoData = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoNome = new javax.swing.JTextField();
+    public static final javax.swing.JTextField campoValor = new javax.swing.JTextField();
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tabelaProduto;
+    public static final javax.swing.JTable tabelaProduto = new javax.swing.JTable();
     private javax.swing.JLabel textoData;
     private javax.swing.JLabel textoNome;
     private javax.swing.JLabel textoTitulo;
