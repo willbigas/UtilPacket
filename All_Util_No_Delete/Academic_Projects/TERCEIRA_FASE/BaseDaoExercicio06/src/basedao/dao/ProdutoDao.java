@@ -114,4 +114,17 @@ public class ProdutoDao extends Dao implements DaoI<Produto> {
 
     }
 
+    @Override
+    public List<Produto> buscarPorTermo(String termo) {
+        List<Produto> produtosPesquisados = listar();
+        List<Produto> novaListaDeResultados = new ArrayList<>();
+        for (Produto p : produtosPesquisados) {
+            if (p.getNome().toLowerCase().contains(termo.toLowerCase())) {
+                novaListaDeResultados.add(p);
+            }
+        }
+        return novaListaDeResultados;
+
+    }
+
 }

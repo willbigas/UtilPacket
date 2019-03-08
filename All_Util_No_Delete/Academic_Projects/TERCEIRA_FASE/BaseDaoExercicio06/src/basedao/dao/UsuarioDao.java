@@ -118,4 +118,17 @@ public class UsuarioDao extends Dao implements DaoI<Usuario> {
 
     }
 
+    @Override
+    public List<Usuario> buscarPorTermo(String termo) {
+        List<Usuario> usuariosPesquisados = listar();
+        List<Usuario> novaListaDeResultados = new ArrayList<>();
+        for (Usuario u : usuariosPesquisados) {
+            if (u.getNome().toLowerCase().contains(termo.toLowerCase()) || u.getEmail().toLowerCase().contains(termo.toLowerCase())) {
+                novaListaDeResultados.add(u);
+            }
+        }
+        return novaListaDeResultados;
+
+    }
+
 }
