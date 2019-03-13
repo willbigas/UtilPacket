@@ -1,2 +1,9 @@
 # UtilPacket
-Pacote de Utilitarios implementado ao decorrer da faculdade de acordo com o contexto necessário para resolução de problemas
+Pacote de Utilitarios para resolver problemas especificos + rapidamente.
+
+
+# Operadores Matematicos
+# Conversores de Formatadores
+# Estruturas de Repeticao e Comparacao
+# Funcoes Recursivas
+# Atalhos e Implementacoes
