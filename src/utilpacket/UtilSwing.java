@@ -1,5 +1,6 @@
 package utilpacket;
 
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 /**
@@ -15,9 +16,17 @@ public class UtilSwing {
      *
      * @throws Exception
      */
-    public void mudandoVisualDasJanelasParaWindows() throws Exception {
+    public static void mudandoVisualDasJanelasParaWindows() throws Exception {
 
         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+
+    }
+
+    public static void msg(String texto) {
+        JOptionPane.showMessageDialog(null, texto);
+    }
+
+    public static void msgWarning(String texto) {
 
     }
 
