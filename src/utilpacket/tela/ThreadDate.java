@@ -10,15 +10,15 @@ import javax.swing.SwingUtilities;
 /**
  * Classe que invoca uma Thread de Data atual - Util para mostrar numa tela.
  * (Relogio Dinamico) Para invocar este Metodo - deve se usar
- * <b>JFrameHora horaAtual = new JFrameHora();</b>
+ * <b>ThreadDate dataAtual = new ThreadDate();</b>
  *
  * @author William Bigas Mauro
  */
-public class JFrameHora extends JFrame {
+public class ThreadDate extends JFrame {
 
     private JLabel label;
 
-    public JFrameHora() {
+    public ThreadDate() {
         setSize(200, 100);
         setTitle("Hora");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -28,7 +28,7 @@ public class JFrameHora extends JFrame {
         add(label, BorderLayout.CENTER);
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new Thread(new AtualizadorHora()).start();
+                new Thread(new AtualizadorData()).start();
             }
         });
     }
@@ -36,23 +36,23 @@ public class JFrameHora extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new JFrameHora().setVisible(true);
+                new ThreadDate().setVisible(true);
             }
         });
     }
 
-    private class AtualizadorHora implements Runnable {
+    private class AtualizadorData implements Runnable {
 
         private SimpleDateFormat sdf;
 
-        public AtualizadorHora() {
-            sdf = new SimpleDateFormat("HH:mm:ss");
+        public AtualizadorData() {
+            sdf = new SimpleDateFormat("dd/MM/yyyy");
         }
 
         public void run() {
             while (true) {
                 try {
-//                    JanelaSaida.tfHoraSaida.setText(sdf.format(new Date())); // Chamar Label ou Textfield
+//                    JanelaSaida.tfDataSaida.setText(sdf.format(new Date())); // chamar a Label ou Button
                     Thread.sleep(500);
                 } catch (InterruptedException exc) {
                     exc.printStackTrace();
