@@ -9,12 +9,12 @@ import java.util.Random;
  *
  * @author William
  */
-public class UtilArray {
+public class Array {
 
     public static Integer[] numRandom(Integer numInicial, Integer numFinal, Integer qtdNumero) {
         Integer array[] = new Integer[qtdNumero];
         for (int i = 0; i < qtdNumero; i++) {
-            array[i] = UtilMath.numRandom(numInicial, numFinal);
+            array[i] = Math.numRandom(numInicial, numFinal);
         }
         return array;
 
@@ -23,7 +23,7 @@ public class UtilArray {
     public static Double[] numRandom(Double numInicial, Double numFinal, Integer qtdNumero) {
         Double array[] = new Double[qtdNumero];
         for (int i = 0; i < qtdNumero; i++) {
-            array[i] = UtilMath.numRandom(numInicial, numFinal);
+            array[i] = Math.numRandom(numInicial, numFinal);
         }
         return array;
 
@@ -43,7 +43,7 @@ public class UtilArray {
 
         int i = 0;
         while (i < valores.length) {
-            valores[i] = UtilMath.numRandom(numInicial, numFinal);
+            valores[i] = Math.numRandom(numInicial, numFinal);
             boolean colide = false;
             for (int j = 0; j < i; j++) {
                 if (valores[i].equals(valores[j])) {
@@ -73,7 +73,7 @@ public class UtilArray {
 
         int i = 0;
         while (i < valores.length) {
-            valores[i] = UtilMath.numRandom(numInicial, numFinal);
+            valores[i] = Math.numRandom(numInicial, numFinal);
             boolean colide = false;
             for (int j = 0; j < i; j++) {
                 if (valores[i].equals(valores[j])) {

@@ -14,13 +14,13 @@ import java.util.Random;
  * @since 16/09/2018 - Ultima Modificacao
  * @author William Bigas Mauro
  */
-public class UtilList {
+public class Lists {
 
     /**
      * Ordena uma Arraylist usando Algoritmo BubbleSort
      *
      * @param lista - Recebe como Parametro uma Lista de inteiros
-     * @return List<Integer> - Retorna uma Lista de Inteiros
+     * @return Lists<Integer> - Retorna uma Lista de Inteiros
      */
     public static List<Integer> bubbleSort(List<Integer> lista) {
         int aux = 0;
@@ -42,7 +42,7 @@ public class UtilList {
      * @param numInicial
      * @param numFinal
      * @param qtdNumero
-     * @return List<Integer>
+     * @return Lists<Integer>
      */
     public static List<Integer> numRandom(Integer numInicial, Integer numFinal, Integer qtdNumero) {
         List<Integer> numA = new ArrayList<>();
@@ -78,7 +78,7 @@ public class UtilList {
      *
      * @param Integer numInicial
      * @param Integer numFinal
-     * @return List<Integer>
+     * @return Lists<Integer>
      * @return
      */
     public static List<Integer> numRandomListNoRepeat(Integer numInicial, Integer numFinal) {
@@ -95,7 +95,7 @@ public class UtilList {
      *
      * @param numInicial
      * @param numFinal
-     * @return List<Double>
+     * @return Lists<Double>
      */
     public static List<Double> numRandomListNoRepeat(Double numInicial, Double numFinal) {
         List<Double> numA = new ArrayList<>();
@@ -109,7 +109,7 @@ public class UtilList {
     /**
      * Media de um Arraylist de Inteiros
      *
-     * @param numeros List <Integer> como parametro
+     * @param numeros Lists <Integer> como parametro
      * @return Integer
      */
     public static Integer media(List<Integer> numeros) {
@@ -125,7 +125,7 @@ public class UtilList {
     /**
      * Media de um Arraylist de Decimais
      *
-     * @param numeros - List <Double> como parametro
+     * @param numeros - Lists <Double> como parametro
      * @return Double retorna um Decimal
      */
     public static Double mediaDec(List<Double> numeros) {

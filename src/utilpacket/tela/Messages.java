@@ -1,10 +1,10 @@
-package utilpacket;
+package utilpacket.tela;
 
 /**
  *
  * @author Alunos
  */
-public class UtilMessages {
+public class Messages {
 
     public static final String SUCESSO_CADASTRO = "Cadastro com Sucesso!";
     public static final String SUCESSO_EDITAR = "Editado com Sucesso!";

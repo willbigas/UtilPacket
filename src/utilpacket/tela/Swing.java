@@ -1,4 +1,4 @@
-package utilpacket;
+package utilpacket.tela;
 
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
@@ -9,7 +9,7 @@ import javax.swing.UIManager;
  * @author WILL
  * @since 28/11/2018
  */
-public class UtilSwing {
+public class Swing {
 
     /**
      * Mudando o visual das janelas para padrão windows.
@@ -22,6 +22,11 @@ public class UtilSwing {
 
     }
 
+    /**
+     * Metodo que mostra uma Mensagem de ShowMessage do Swing!
+     *
+     * @param texto
+     */
     public static void msg(String texto) {
         JOptionPane.showMessageDialog(null, texto);
     }

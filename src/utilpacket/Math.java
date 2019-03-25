@@ -8,7 +8,7 @@ import java.util.Random;
  * @since 16/09/2018
  * @author William Bigas Mauro
  */
-public class UtilMath {
+public class Math {
 
     /**
      * Medias de Decimais.

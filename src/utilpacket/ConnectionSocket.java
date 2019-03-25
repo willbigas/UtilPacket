@@ -13,7 +13,7 @@ import java.net.Socket;
  *
  * @author William
  */
-public class UtilSocket {
+public class ConnectionSocket {
 
     private static ServerSocket servidor;
 
@@ -24,7 +24,7 @@ public class UtilSocket {
     }
 
     public static void setObjRecebido(Object objRecebido) {
-        UtilSocket.OBJ_RECEBIDO = objRecebido;
+        ConnectionSocket.OBJ_RECEBIDO = objRecebido;
     }
 
     public static ServerSocket getServidor() {
@@ -32,7 +32,7 @@ public class UtilSocket {
     }
 
     public static void setServidor(ServerSocket servidor) {
-        UtilSocket.servidor = servidor;
+        ConnectionSocket.servidor = servidor;
     }
 
     public static void iniciarSocketEstatico(Integer porta) throws Exception {
@@ -81,12 +81,12 @@ public class UtilSocket {
     }
 
     public static void recebendoDadosViaSocketInfinitamente(Integer porta) throws NumberFormatException, HeadlessException, Exception {
-        UtilSocket.iniciarSocketEstatico(porta);
+        ConnectionSocket.iniciarSocketEstatico(porta);
         Thread t = new Thread() {
             public void run() {
                 try {
                     while (true) {
-                        Socket entradaDados = UtilSocket.getServidor().accept();
+                        Socket entradaDados = ConnectionSocket.getServidor().accept();
                         ObjectInputStream input = new ObjectInputStream(entradaDados.getInputStream());
                         OBJ_RECEBIDO = input.readObject(); // Obj Recebido se encontra aqui
                         entradaDados.close();
