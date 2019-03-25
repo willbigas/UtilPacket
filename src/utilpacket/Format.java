@@ -2,13 +2,14 @@ package utilpacket;
 
 import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
  * Utilitario para Formatacao de Variaveis - Data, DecimalFormat
  *
- * @since 03/09/2018 - Ultima Modificação
+ * @since 25/03/2019 - Ultima Modificação
  * @author William Bigas Mauro
  */
 public class Format {
@@ -34,6 +35,32 @@ public class Format {
      */
     public static String data(Date data) throws Exception {
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        return df.format(data);
+    }
+
+    /**
+     * Convertendo String para Data no Formato HH:mm:ss
+     *
+     * @param dataStr
+     * @return Date
+     */
+    public static Date dataHour(String dataStr) {
+        try {
+            DateFormat df = new SimpleDateFormat("HH:mm:ss");
+            return df.parse(dataStr);
+        } catch (ParseException parseException) {
+        }
+        return null;
+    }
+
+    /**
+     * Convertendo Data para String no Formato HH:mm:ss
+     *
+     * @param data
+     * @return String
+     */
+    public static String dataHour(Date data) {
+        DateFormat df = new SimpleDateFormat("HH:mm:ss");
         return df.format(data);
     }
 
