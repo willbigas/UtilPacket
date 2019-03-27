@@ -1,4 +1,4 @@
-package utilpacket.tela;
+package thread;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -10,15 +10,15 @@ import javax.swing.SwingUtilities;
 /**
  * Classe que invoca uma Thread de Data atual - Util para mostrar numa tela.
  * (Relogio Dinamico) Para invocar este Metodo - deve se usar
- * <b>ThreadDate dataAtual = new ThreadDate();</b>
+ * <b>ThreadHour horaAtual = new ThreadHour();</b>
  *
  * @author William Bigas Mauro
  */
-public class ThreadDate extends JFrame {
+public class ThreadHour extends JFrame {
 
     private JLabel label;
 
-    public ThreadDate() {
+    public ThreadHour() {
         setSize(200, 100);
         setTitle("Hora");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -28,7 +28,7 @@ public class ThreadDate extends JFrame {
         add(label, BorderLayout.CENTER);
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new Thread(new AtualizadorData()).start();
+                new Thread(new AtualizadorHora()).start();
             }
         });
     }
@@ -36,23 +36,23 @@ public class ThreadDate extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new ThreadDate().setVisible(true);
+                new ThreadHour().setVisible(true);
             }
         });
     }
 
-    private class AtualizadorData implements Runnable {
+    private class AtualizadorHora implements Runnable {
 
         private SimpleDateFormat sdf;
 
-        public AtualizadorData() {
-            sdf = new SimpleDateFormat("dd/MM/yyyy");
+        public AtualizadorHora() {
+            sdf = new SimpleDateFormat("HH:mm:ss");
         }
 
         public void run() {
             while (true) {
                 try {
-//                    JanelaSaida.tfDataSaida.setText(sdf.format(new Date())); // chamar a Label ou Button
+//                    JanelaSaida.tfHoraSaida.setText(sdf.format(new Date())); // Chamar Label ou Textfield
                     Thread.sleep(500);
                 } catch (InterruptedException exc) {
                     exc.printStackTrace();

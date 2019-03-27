@@ -1,4 +1,4 @@
-package utilpacket;
+package serializable;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -27,7 +27,7 @@ public class Serializable {
      * @throws FileNotFoundException
      * @throws Exception
      */
-    public static Object lerSerializando(String enderecoArq, Object objeto) throws FileNotFoundException, Exception {
+    public static Object readSerializable(String enderecoArq, Object objeto) throws FileNotFoundException, Exception {
         FileInputStream arqEntrada = new FileInputStream(enderecoArq);
         try (ObjectInputStream in = new ObjectInputStream(arqEntrada)) {
             objeto = (Object) in.readObject();
@@ -44,7 +44,7 @@ public class Serializable {
      * @throws FileNotFoundException
      * @throws Exception
      */
-    public static List lerSerializando(String enderecoArq, List lista) throws FileNotFoundException, Exception {
+    public static List readSerializable(String enderecoArq, List lista) throws FileNotFoundException, Exception {
         FileInputStream arqEntrada = new FileInputStream(enderecoArq);
         try (ObjectInputStream in = new ObjectInputStream(arqEntrada)) {
             lista = (List) in.readObject();
@@ -60,7 +60,7 @@ public class Serializable {
      * @return
      * @throws Exception
      */
-    public static String lerSerializando(String enderecoArq, String conteudo) throws Exception {
+    public static String readSerializable(String enderecoArq, String conteudo) throws Exception {
         String resultado;
         try (FileInputStream arqEntrada = new FileInputStream(enderecoArq)) {
             DataInputStream dadosIn = new DataInputStream(arqEntrada);
@@ -78,7 +78,7 @@ public class Serializable {
      * @return
      * @throws Exception
      */
-    public static Integer lerSerializando(String enderecoArq, Integer conteudo) throws Exception {
+    public static Integer readSerializable(String enderecoArq, Integer conteudo) throws Exception {
         Integer resultado;
         try (FileInputStream arqEntrada = new FileInputStream(enderecoArq)) {
             DataInputStream dadosIn = new DataInputStream(arqEntrada);
@@ -96,7 +96,7 @@ public class Serializable {
      * @return
      * @throws Exception
      */
-    public static Double lerSerializando(String enderecoArq, Double conteudo) throws Exception {
+    public static Double readSerializable(String enderecoArq, Double conteudo) throws Exception {
         Double resultado;
         try (FileInputStream arqEntrada = new FileInputStream(enderecoArq)) {
             DataInputStream dadosIn = new DataInputStream(arqEntrada);
@@ -114,7 +114,7 @@ public class Serializable {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public static void escreverSerializando(String enderecoArq, Object objeto) throws FileNotFoundException, IOException {
+    public static void writeSerializable(String enderecoArq, Object objeto) throws FileNotFoundException, IOException {
         FileOutputStream arqEntrada = new FileOutputStream(enderecoArq);
         try (ObjectOutputStream out = new ObjectOutputStream(arqEntrada)) {
             out.writeObject(objeto);
@@ -130,7 +130,7 @@ public class Serializable {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public static void escreverSerializando(String enderecoArq, List lista) throws FileNotFoundException, IOException {
+    public static void writeSerializable(String enderecoArq, List lista) throws FileNotFoundException, IOException {
         FileOutputStream arqEntrada = new FileOutputStream(enderecoArq);
         try (ObjectOutputStream out = new ObjectOutputStream(arqEntrada)) {
             out.writeObject(lista);
@@ -145,7 +145,7 @@ public class Serializable {
      * @param conteudo
      * @throws Exception
      */
-    public static void escreverSerializando(String enderecoArq, String conteudo) throws Exception {
+    public static void writeSerializable(String enderecoArq, String conteudo) throws Exception {
         try (FileOutputStream arqSaida = new FileOutputStream(enderecoArq)) {
             DataOutputStream dadosOut = new DataOutputStream(arqSaida);
             dadosOut.writeUTF(conteudo);
@@ -160,7 +160,7 @@ public class Serializable {
      * @param conteudo
      * @throws Exception
      */
-    public static void escreverSerializando(String enderecoArq, Integer conteudo) throws Exception {
+    public static void writeSerializable(String enderecoArq, Integer conteudo) throws Exception {
         try (FileOutputStream arqSaida = new FileOutputStream(enderecoArq)) {
             DataOutputStream dadosOut = new DataOutputStream(arqSaida);
             dadosOut.writeInt(conteudo);

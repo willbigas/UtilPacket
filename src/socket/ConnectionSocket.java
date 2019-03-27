@@ -1,4 +1,4 @@
-package utilpacket;
+package socket;
 
 import java.awt.HeadlessException;
 import java.io.IOException;
@@ -80,6 +80,14 @@ public class ConnectionSocket {
 
     }
 
+    /**
+     * Escuta uma Porta infinitamente e Recebe os Dados e Joga na Classe.
+     *
+     * @param porta
+     * @throws NumberFormatException
+     * @throws HeadlessException
+     * @throws Exception
+     */
     public static void recebendoDadosViaSocketInfinitamente(Integer porta) throws NumberFormatException, HeadlessException, Exception {
         ConnectionSocket.iniciarSocketEstatico(porta);
         Thread t = new Thread() {

@@ -1,11 +1,8 @@
-package utilpacket;
+package collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 /**
@@ -138,23 +135,6 @@ public class Lists {
         return calculo;
     }
 
-    /**
-     * Faz Contagem de frequencia de valores e retorna um Map < Key,Value >
-     *
-     * @param objetos Recebe como parametro uma lista de objetos
-     * @return Map - Retorna um Map < Key , Value >
-     */
-    public static Map mapearFreqObj(List objetos) {
-        Map<String, Integer> contFreq = new HashMap<>();
-        Iterator<Integer> it = objetos.iterator();
-        while (it.hasNext()) {
-            Object obj = it.next();
-            int frequency = Collections.frequency(objetos, obj);
-            contFreq.put(String.valueOf(obj), frequency);
-        }
-
-        return contFreq;
-
-    }
+  
 
 }

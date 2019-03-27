@@ -1,13 +1,13 @@
-package utilpacket.tela;
+package swing;
 
 /**
  *
  * @author Alunos
  */
-public class Messages {
+public class Text {
 
     /**
-     * CRUD Messages
+     * CRUD Text
      */
     // Sucess
     public static final String SUCESS_CREATE = "Cadastrado com Sucesso!";

@@ -1,20 +1,48 @@
-package utilpacket;
-
-import java.util.Random;
+package math;
 
 /**
- * Utilitarios de Array - Numeros Randomicos
- *
- * @since Ultima Modificacao 03/09/2018
  *
  * @author William
  */
-public class Array {
+public class Random {
+
+    /**
+     * Gerar Numeros Randomicos Inteiros entre um NumeroInicial e Final, Pode
+     * haver Repeticoes de numeros
+     *
+     * @param numInicial
+     * @param numFinal
+     * @return Integer
+     */
+    public static Integer numRandom(Integer numInicial, Integer numFinal) {
+        java.util.Random gerador = new java.util.Random();
+        for (int i = 0; i < 1; i++) { //Sequencia da mega sena
+            Integer numeroR = gerador.nextInt((numFinal + 1) - numInicial) + numInicial;
+            return numeroR;
+        }
+        return null;
+    }
+
+    /**
+     * Gerar Numeros Randomicos Decimais entre um NumeroInicial e Final, Pode
+     * haver Repeticoes de numeros
+     *
+     * @param numInicial
+     * @param numFinal
+     * @return
+     */
+    public static Double numRandom(Double numInicial, Double numFinal) {
+        java.util.Random gerador = new java.util.Random();
+        for (int i = 0; i < 1; i++) { //Sequencia da mega sena
+            return numInicial + ((numFinal + 1) - numInicial) * gerador.nextDouble();
+        }
+        return null;
+    }
 
     public static Integer[] numRandom(Integer numInicial, Integer numFinal, Integer qtdNumero) {
         Integer array[] = new Integer[qtdNumero];
         for (int i = 0; i < qtdNumero; i++) {
-            array[i] = Math.numRandom(numInicial, numFinal);
+            array[i] = numRandom(numInicial, numFinal);
         }
         return array;
 
@@ -23,7 +51,7 @@ public class Array {
     public static Double[] numRandom(Double numInicial, Double numFinal, Integer qtdNumero) {
         Double array[] = new Double[qtdNumero];
         for (int i = 0; i < qtdNumero; i++) {
-            array[i] = Math.numRandom(numInicial, numFinal);
+            array[i] = numRandom(numInicial, numFinal);
         }
         return array;
 
@@ -39,11 +67,11 @@ public class Array {
      */
     public static Integer[] numRandomNoRepeat(Integer numInicial, Integer numFinal, Integer qtdNumero) {
         Integer[] valores = new Integer[qtdNumero];
-        Random gera = new Random();
+        java.util.Random gera = new java.util.Random();
 
         int i = 0;
         while (i < valores.length) {
-            valores[i] = Math.numRandom(numInicial, numFinal);
+            valores[i] = numRandom(numInicial, numFinal);
             boolean colide = false;
             for (int j = 0; j < i; j++) {
                 if (valores[i].equals(valores[j])) {
@@ -69,11 +97,11 @@ public class Array {
      */
     public static Double[] numRandomNoRepeat(Double numInicial, Double numFinal, Integer qtdNumero) {
         Double[] valores = new Double[qtdNumero];
-        Random gera = new Random();
+        java.util.Random gera = new java.util.Random();
 
         int i = 0;
         while (i < valores.length) {
-            valores[i] = Math.numRandom(numInicial, numFinal);
+            valores[i] = numRandom(numInicial, numFinal);
             boolean colide = false;
             for (int j = 0; j < i; j++) {
                 if (valores[i].equals(valores[j])) {
@@ -88,37 +116,4 @@ public class Array {
         return valores;
 
     }
-
-    /**
-     * Media de um Array de Inteiros
-     *
-     * @param numeros
-     * @return Integer
-     */
-    public static Integer media(Integer[] numeros) {
-        Integer quantidade = numeros.length;
-        Integer valorT = 0;
-        for (Integer numero : numeros) {
-            valorT = valorT + numero;
-        }
-        Integer calculo = valorT / quantidade;
-        return calculo;
-    }
-
-    /**
-     * Media de um Array de Inteiros
-     *
-     * @param numeros
-     * @return Integer
-     */
-    public static Double media(Double[] numeros) {
-        Integer quantidade = numeros.length;
-        Double valorT = 0.0;
-        for (Double numero : numeros) {
-            valorT = valorT + numero;
-        }
-        Double calculo = valorT / quantidade;
-        return calculo;
-    }
-
 }
