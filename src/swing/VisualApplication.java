@@ -1,7 +1,11 @@
 package swing;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -15,8 +19,7 @@ public class VisualApplication {
 
     /**
      * Muda o visual das janelas para Interface que o Sistema executar por
-     * Padrão.
-     * Se o sistema operacional for windows , a aplicação executará em
+     * Padrão. Se o sistema operacional for windows , a aplicação executará em
      * interface windows.
      *
      * @throws Exception
@@ -63,6 +66,22 @@ public class VisualApplication {
         for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
             System.out.println(info.getName());
         }
+    }
+
+    /**
+     * Editar o Icone do JFrame - Necessário indicar a Janela e o Endereco de
+     * Arquivo
+     * <b>Atenção - Necessário ter uma imagem no projeto para chamar o
+     * enderecoArq</b>
+     *
+     * @param jframe -- Janela de Jframe a ser modificada
+     * @param enderecoArq - Ex : /prova/img/icon_product_16x16.png
+     */
+    public static void changeIconOfJFrame(JFrame jframe, String enderecoArq) {
+        URL url;
+        url = jframe.getClass().getResource(enderecoArq);
+        Image imagemTitulo = Toolkit.getDefaultToolkit().getImage(url);
+        jframe.setIconImage(imagemTitulo);
     }
 
 }
