@@ -19,6 +19,7 @@ public class Text {
     // Errors
     public static final String ERROR_DELETE = "Erro ao excluir";
     public static final String ERROR_CREATE = "Erro ao Cadastrar!";
+    public static final String ERROR_EDIT = "Erro ao Editar!";
     public static final String ERROR_IN = "Erro ao gravar Entrada";
     public static final String ERROR_OUT = "Erro ao Gravar a Saida";
 
