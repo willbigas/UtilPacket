@@ -1,4 +1,4 @@
-package files;
+package arquivo;
 
 import java.awt.Desktop;
 import java.io.BufferedReader;

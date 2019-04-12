@@ -1,4 +1,4 @@
-package math;
+package matematica;
 
 /**
  * Utilitarios Matematicos Simples (Media,Porcentagem,Raiz Quadrada ,Fatorial)

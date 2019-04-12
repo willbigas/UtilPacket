@@ -2,7 +2,7 @@ package swing;
 
 /**
  *
- * @author Alunos
+ * @author William
  */
 public class Texto {
 
@@ -23,7 +23,7 @@ public class Texto {
     // Mensagens de Campos Vazios Padrões
     public static final String VAZIO_CAMPO = "O Campo está vazio!";
     public static final String VAZIO_CAMPOS = "Algum dos campos estão vazios!";
-    
+
     // Mensagem de Campos ou Componentes não selecionados.
     public static final String SELECIONADA_LINHA = "Nenhuma Linha Selecionada!";
     public static final String SELECIONADA_COLUNA = "Nenhuma Coluna Selecionada!";

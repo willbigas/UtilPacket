@@ -13,7 +13,7 @@ public class Mensagem {
      *
      * @param texto
      */
-    public static void msgInfo(String texto) {
+    public static void info(String texto) {
         JOptionPane.showMessageDialog(null, texto, "Informação!", JOptionPane.INFORMATION_MESSAGE);
     }
 
@@ -22,7 +22,7 @@ public class Mensagem {
      *
      * @param texto
      */
-    public static void msgError(String texto) {
+    public static void erro(String texto) {
         JOptionPane.showMessageDialog(null, texto, "Erro!", JOptionPane.ERROR_MESSAGE);
     }
 
@@ -31,7 +31,7 @@ public class Mensagem {
      *
      * @param texto
      */
-    public static void msgWarning(String texto) {
+    public static void atencao(String texto) {
         JOptionPane.showMessageDialog(null, texto, "Atenção!", JOptionPane.WARNING_MESSAGE);
     }
 
@@ -40,7 +40,7 @@ public class Mensagem {
      *
      * @param texto
      */
-    public static void msgQuestion(String texto) {
+    public static void pergunta(String texto) {
         JOptionPane.showMessageDialog(null, texto, "Atenção!", JOptionPane.QUESTION_MESSAGE);
     }
 
@@ -49,7 +49,7 @@ public class Mensagem {
      *
      * @param texto
      */
-    public static void msgPlain(String texto) {
+    public static void simples(String texto) {
         JOptionPane.showMessageDialog(null, texto, "Mensagem!", JOptionPane.PLAIN_MESSAGE);
     }
 
@@ -59,7 +59,7 @@ public class Mensagem {
      * @param pergunta
      * @return 0 - Yes Option , 1 - No Option
      */
-    public static int msgConfirm(String pergunta) {
+    public static int confirmacao(String pergunta) {
         return JOptionPane.showConfirmDialog(null, pergunta, "Pergunta", JOptionPane.YES_OPTION);
     }
 
@@ -69,7 +69,7 @@ public class Mensagem {
      * @param pergunta
      * @return 0 - Yes Option , 1 - No Option , 2 - Cancel Option
      */
-    public static int msgConfirmWithCancel(String pergunta) {
+    public static int confirmacaoComCancelar(String pergunta) {
         return JOptionPane.showConfirmDialog(null, pergunta, "Pergunta", JOptionPane.YES_NO_CANCEL_OPTION);
     }
 
@@ -79,7 +79,7 @@ public class Mensagem {
      * @param value
      * @return
      */
-    public static String input(Object value) {
+    public static String entrada(Object value) {
         return JOptionPane.showInputDialog(value);
     }
 }
