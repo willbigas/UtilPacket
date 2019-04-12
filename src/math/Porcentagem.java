@@ -4,7 +4,7 @@ package math;
  *
  * @author William
  */
-public class Percentage {
+public class Porcentagem {
 
     /**
      * Calculo de Porcentagem de Dois Doubles.

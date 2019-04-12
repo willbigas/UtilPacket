@@ -4,7 +4,7 @@ package math;
  *
  * @author William
  */
-public class Average {
+public class Media {
 
     /**
      * Medias de Decimais.

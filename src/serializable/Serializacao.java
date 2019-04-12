@@ -16,7 +16,7 @@ import java.util.List;
  * @since 16/09/2018 - Ultima Modificacao
  * @author William Bigas Mauro
  */
-public class Serializable {
+public class Serializacao {
 
     /**
      * Le um objeto serializado através de Stream

@@ -4,7 +4,7 @@ package converter;
  *
  * @author William
  */
-public class Temperature {
+public class Temperatura {
 
     /**
      * Converter Celcius em Kelvin

@@ -1,4 +1,4 @@
-package calendar;
+package calendario;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -7,18 +7,18 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 /**
- * Classe de Utilitarios para Date - Conversores , Validações e Verificações.
+ * Classe de Utilitarios para Data - Conversores , Validações e Verificações.
  *
  * @author William Bigas Mauro
  * @since 27/03/2019
  */
-public class Date {
+public class Data {
 
     /**
      * Convertendo String para Data no Formato DD/MM/AAAA
      *
      * @param dataStr
-     * @return Date
+     * @return Data
      * @throws Exception
      */
     public static java.util.Date data(String dataStr) throws Exception {
@@ -67,7 +67,7 @@ public class Date {
      * Convertendo String para Data no Formato HH:mm:ss
      *
      * @param dataStr
-     * @return Date
+     * @return Data
      */
     public static java.util.Date dataHour(String dataStr) {
         try {

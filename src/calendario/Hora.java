@@ -1,4 +1,4 @@
-package calendar;
+package calendario;
 
 import java.text.SimpleDateFormat;
 
@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
  *
  * @author William
  */
-public class Hour {
+public class Hora {
 
     /**
      * Formatando Integer em Minutos:Segundos
@@ -14,7 +14,7 @@ public class Hour {
      * @param numero
      * @return
      */
-    public static String mmss(Integer numero) {
+    public static String Hora(Integer numero) {
         SimpleDateFormat sdf = new SimpleDateFormat();
         sdf.applyPattern("mm:ss");
         return sdf.format(numero);

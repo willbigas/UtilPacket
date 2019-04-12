@@ -4,7 +4,7 @@ package math;
  *
  * @author William
  */
-public class Random {
+public class Randomicos {
 
     /**
      * Gerar Numeros Randomicos Inteiros entre um NumeroInicial e Final, Pode

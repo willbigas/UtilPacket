@@ -6,7 +6,7 @@ package math;
  * @since 16/09/2018
  * @author William Bigas Mauro
  */
-public class Calculation {
+public class Calculo {
 
     /**
      * Calculo de Raiz Quadrada

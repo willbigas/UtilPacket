@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
  *
  * @author William
  */
-public class OptionPane {
+public class Mensagem {
 
     /**
      * Mensagem de Informação do Swing
