@@ -19,22 +19,43 @@ public class ConectaSocket {
 
     private static Object OBJ_RECEBIDO;
 
+    /**
+     *
+     * @return
+     */
     public static Object getObjRecebido() {
         return OBJ_RECEBIDO;
     }
 
+    /**
+     *
+     * @param objRecebido
+     */
     public static void setObjRecebido(Object objRecebido) {
         ConectaSocket.OBJ_RECEBIDO = objRecebido;
     }
 
+    /**
+     *
+     * @return
+     */
     public static ServerSocket getServidor() {
         return servidor;
     }
 
+    /**
+     *
+     * @param servidor
+     */
     public static void setServidor(ServerSocket servidor) {
         ConectaSocket.servidor = servidor;
     }
 
+    /**
+     *
+     * @param porta
+     * @throws Exception
+     */
     public static void iniciarSocketEstatico(Integer porta) throws Exception {
         servidor = new ServerSocket(porta);
 

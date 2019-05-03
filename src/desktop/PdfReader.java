@@ -1,4 +1,4 @@
-package desktop.pdf;
+package desktop;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -11,6 +11,10 @@ import javax.swing.JOptionPane;
  */
 public class PdfReader {
 
+    /**
+     *
+     * @param endereco
+     */
     public void abrirArquivoPdf(String endereco) {
         // TODO add your handling code here:
         try {

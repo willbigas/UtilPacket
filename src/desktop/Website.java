@@ -1,4 +1,4 @@
-package desktop.https;
+package desktop;
 
 import java.awt.Desktop;
 import java.io.IOException;
@@ -10,7 +10,13 @@ import java.net.URISyntaxException;
  * @author William
  */
 public class Website {
-    
+
+    /**
+     * Manda uma requisição pro navegador padrão do sistema operacional abrir um
+     * determinado endereco URL.
+     *
+     * @param endereco
+     */
     public static void abreWebSiteNoNavegadorPadrao(String endereco) {
         try {
             Desktop desktop = null;

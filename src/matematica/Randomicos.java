@@ -39,6 +39,13 @@ public class Randomicos {
         return null;
     }
 
+    /**
+     *
+     * @param numInicial
+     * @param numFinal
+     * @param qtdNumero
+     * @return
+     */
     public static Integer[] numRandom(Integer numInicial, Integer numFinal, Integer qtdNumero) {
         Integer array[] = new Integer[qtdNumero];
         for (int i = 0; i < qtdNumero; i++) {
@@ -48,6 +55,13 @@ public class Randomicos {
 
     }
 
+    /**
+     *
+     * @param numInicial
+     * @param numFinal
+     * @param qtdNumero
+     * @return
+     */
     public static Double[] numRandom(Double numInicial, Double numFinal, Integer qtdNumero) {
         Double array[] = new Double[qtdNumero];
         for (int i = 0; i < qtdNumero; i++) {

@@ -18,6 +18,9 @@ public class ThreadDeHora extends JFrame {
 
     private JLabel label;
 
+    /**
+     *
+     */
     public ThreadDeHora() {
         setSize(200, 100);
         setTitle("Hora");
@@ -33,6 +36,10 @@ public class ThreadDeHora extends JFrame {
         });
     }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {

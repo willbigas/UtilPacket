@@ -73,9 +73,8 @@ public class Lists {
     /**
      * Gerar Lista de numeros Randomicos Inteiros Aleatórios sem Repetições
      *
-     * @param Integer numInicial
+     * @param numFinal
      * @param Integer numFinal
-     * @return Lists<Integer>
      * @return
      */
     public static List<Integer> numRandomListNoRepeat(Integer numInicial, Integer numFinal) {
