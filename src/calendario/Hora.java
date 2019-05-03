@@ -55,4 +55,14 @@ public class Hora {
         sdf.applyPattern("HH:mm:ss");
         return sdf.format(numero);
     }
+    
+     /**
+     * Pega a hora Atual e converte em String no formato HH:mm:ss
+     * @return String : 10:50:25
+     */
+    public static String horaAtual(){
+        SimpleDateFormat formatador = new SimpleDateFormat("HH:mm:ss");
+        java.util.Date dataUtil = new java.util.Date();
+        return formatador.format(dataUtil.getTime());
+    }
 }

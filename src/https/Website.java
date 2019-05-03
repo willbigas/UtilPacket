@@ -16,12 +16,12 @@ public class Website {
             Desktop desktop = null;
             //Primeiro verificamos se é possível a integração com o desktop
             if (!Desktop.isDesktopSupported()) {
-                throw new IllegalStateException("Desktop resources not supported!");
+                throw new IllegalStateException("Não consegui acessar sua area de Trabalho");
             }
             desktop = Desktop.getDesktop();
             //Agora vemos se é possível disparar o browser default.
             if (!desktop.isSupported(Desktop.Action.BROWSE)) {
-                throw new IllegalStateException("No default browser set!");
+                throw new IllegalStateException("Navegador Padrão não encontrado!");
             }
             URI uri = new URI(endereco);
             desktop.browse(uri);

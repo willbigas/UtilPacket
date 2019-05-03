@@ -24,7 +24,7 @@ public class InterfaceJanela {
      *
      * @throws Exception
      */
-    public static void mudaInterfaceSwingParaPadrao() throws Exception {
+    public static void MudaSwingParaPadraoDoSO() throws Exception {
         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
     }

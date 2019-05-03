@@ -45,7 +45,7 @@ public class Data {
      * @param data
      * @return Retorna True se a Data for Valida
      */
-    public static boolean isDate(String data) {
+    public static boolean dataValida(String data) {
         try {
 
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -69,7 +69,7 @@ public class Data {
      * @param dataStr
      * @return Data
      */
-    public static java.util.Date dataHour(String dataStr) {
+    public static java.util.Date dataHora(String dataStr) {
         try {
             DateFormat df = new SimpleDateFormat("HH:mm:ss");
             return df.parse(dataStr);
@@ -84,7 +84,7 @@ public class Data {
      * @param data
      * @return String
      */
-    public static String dataHour(java.util.Date data) {
+    public static String dataHora(java.util.Date data) {
         DateFormat df = new SimpleDateFormat("HH:mm:ss");
         return df.format(data);
     }
@@ -95,7 +95,7 @@ public class Data {
      * @return Se dataVerificada comparada com hoje é menor então retorna
      * verdadeiro, senão, retorna falso.
      */
-    public boolean dateLowerThanToday(String data) {
+    public boolean menorQueHoje(String data) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate dataVerificada = LocalDate.parse(data, dtf);
         //Esse comando pega a data de hoje
@@ -110,7 +110,7 @@ public class Data {
      * @return Se dataVerificada comparada com hoje é Maior então retorna
      * verdadeiro, senão, retorna falso.
      */
-    public boolean dateLargerThanToday(String data) {
+    public boolean maiorQueHoje(String data) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate dataVerificada = LocalDate.parse(data, dtf);
         //Esse comando pega a data de hoje
@@ -125,7 +125,7 @@ public class Data {
      * @return Se dataVerificada comparada com hoje é igual hoje então retorna
      * verdadeiro, senão, retorna falso.
      */
-    public boolean dateSameToday(String data) {
+    public boolean dataDeHoje(String data) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate dataVerificada = LocalDate.parse(data, dtf);
         //Esse comando pega a data de hoje
@@ -133,5 +133,43 @@ public class Data {
 
         return dataVerificada.compareTo(hoje) == 0;
     }
+    
+    /**
+     * Converte uma data vinda no formato do banco de dados
+     * @param data
+     * @return data no formato dd/MM/yyyy
+     */
+    public static String deSql(java.sql.Date data){
+        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+        return formatador.format(data);
+    }
+    
+    /**
+    * Converte uma data vinda no formato de string do usuário
+    * @param data
+    * @return data no formato do banco de dados
+    */
+    public static java.sql.Date paraSql(String data){
+        try {
+            SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+            java.util.Date dataUtil = formatador.parse(data);
+            return new java.sql.Date(dataUtil.getTime());
+        } catch (ParseException ex) {
+            System.out.println("Erro ao converter data");
+            return null;
+        }
+        
+    }
+    
+    /**
+     * Retorna a data atual convertida em String no formato dd/MM/yyyy
+     * @return 
+     */
+    public static String dataAtual(){
+        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+        java.util.Date dataUtil = new java.util.Date();
+        return formatador.format(dataUtil);
+    }
+    
 
 }
