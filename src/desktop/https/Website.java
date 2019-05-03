@@ -1,4 +1,4 @@
-package https;
+package desktop.https;
 
 import java.awt.Desktop;
 import java.io.IOException;

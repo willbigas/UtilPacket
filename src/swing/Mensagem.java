@@ -41,7 +41,7 @@ public class Mensagem {
      * @param texto
      */
     public static void pergunta(String texto) {
-        JOptionPane.showMessageDialog(null, texto, "Atenção!", JOptionPane.QUESTION_MESSAGE);
+        JOptionPane.showMessageDialog(null, texto, "Pergunta!", JOptionPane.QUESTION_MESSAGE);
     }
 
     /**
