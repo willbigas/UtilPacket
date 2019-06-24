@@ -1,5 +1,10 @@
 package formatador;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.Locale;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author William
@@ -52,6 +57,22 @@ public class DecimalFormat {
         java.text.DecimalFormat df = new java.text.DecimalFormat();
         df.applyPattern("###,###,##0.00");
         return df.format(numero);
+    }
+    
+    public static Double toDecimalUs(String valorDecimal) {
+        double d = 0;
+        try {
+            NumberFormat format = NumberFormat.getInstance(Locale.FRANCE);
+            Number number = format.parse(valorDecimal);
+            d = number.doubleValue();
+        } catch (ParseException parseException) {
+            JOptionPane.showMessageDialog(null, "Erro ao converter para NumberFormat com [.]");
+        }
+        return d;
+    }
+    
+      public static String trocarParaPonto(String valorDecimal) {
+         return valorDecimal.replace(",",".");
     }
 
 }
