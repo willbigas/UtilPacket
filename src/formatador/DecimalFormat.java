@@ -58,7 +58,7 @@ public class DecimalFormat {
         df.applyPattern("###,###,##0.00");
         return df.format(numero);
     }
-    
+
     public static Double toDecimalUs(String valorDecimal) {
         double d = 0;
         try {
@@ -70,9 +70,26 @@ public class DecimalFormat {
         }
         return d;
     }
-    
-      public static String trocarParaPonto(String valorDecimal) {
-         return valorDecimal.replace(",",".");
+
+    /**
+     * Recebe uma String com campos decimais em , Ex : [1000,00] e converte para
+     * campos com ponto Ex : [1000.00]
+     *
+     * @param valorDecimal
+     * @return
+     */
+    public static String paraPonto(String valorDecimal) {
+        return valorDecimal.replace(",", ".");
     }
 
+    /**
+     * Recebe uma String com campos decimais em . Ex : [1000.00] e converte para
+     * campos com virgula Ex : [1000,00]
+     *
+     * @param valorDecimal
+     * @return
+     */
+    public static String paraVirgula(String valorDecimal) {
+        return valorDecimal.replace(".", ",");
+    }
 }
